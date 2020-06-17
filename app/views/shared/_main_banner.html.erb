@@ -2,6 +2,11 @@
   <div class="container">
     <h1>Rent animals to <strong>clear your yard</strong>!</h1>
     <p>More eco-friendly than machines because there is no pollution. Goats naturally fertilize as they go. They can also save you up to 50% compared to average landscaping labor costs.</p>
-    <a class="btn btn-primary" href="#">Apply now</a>
+    <%= simple_form_for :search, url: animals_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+      <%= f.input :address, placeholder: "Location", label: false, input_html: { class: "form-control-lg", id: 'city' } %>
+      <%= f.input :starts_on, placeholder: "from:", label: false, input_html: { class: "form-control-lg" } %>
+      <%= f.input :ends_on, placeholder: "to:", label: false, input_html: { class: "form-control-lg"} %>
+      <%= f.button :submit, "Search", class: "btn btn-primary btn-lg" %>
+    <% end %>
   </div>
 </div>
