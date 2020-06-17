@@ -1,1 +1,83 @@
-    <%= render 'shared/main_banner' %>
+<div class="main-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1532762487806-ceca4f30263b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80);">
+  <div class="container">
+    <h1>Do you need to <strong>clean your yard</strong>?</h1>
+    <p>Rent animals for a sustainable approach to vegetation management.</p>
+    <%= simple_form_for :search, url: animals_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+      <%= f.input :address, placeholder: "Location", label: false, input_html: { class: "form-control-lg" } %>
+      <%= f.button :submit, "Search", class: "btn btn-primary btn-lg" %>
+    <% end %>
+  </div>
+</div>
+
+<br>
+
+<div class="container">
+
+  <div class="cards">
+    <div class="card">
+      <img class="card-img-top" src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="save money">
+      <div class="card-body">
+        <h5 class="card-title">Cheap</h5>
+        <p class="card-text">Save up to 50% compared to average landscaping labor costs.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://images.unsplash.com/photo-1504198266287-1659872e6590?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="leaf">
+      <div class="card-body">
+        <h5 class="card-title">Eco-friendly</h5>
+        <p class="card-text">No pollution, unlike machines.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://images.unsplash.com/photo-1474440692490-2e83ae13ba29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="grow">
+      <div class="card-body">
+        <h5 class="card-title">Organic fertilizers</h5>
+        <p class="card-text">Animals naturally fertilize as they go.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <br>
+    <hr>
+    <h2>Trusted by more than 300 landowners worldwide! </h2>
+    <hr>
+    <br>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-subtitle mb-2"><i class="fas fa-seedling"></i></h3>
+        <h5 class="card-title"><strong>Should I prepare my land first?</strong></h5>
+        <p class="card-text">Better but not mandatory. Ideally, your lawn should not have been treated with insecticides to preserve the good health of animals. Notice that animals can easily clear land on steep hillsides and rough terrain, and can go where people and machines cannot go safely.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-subtitle mb-2"><i class="fas fa-hand-holding-usd"></i></h3>
+        <h5 class="card-title"><strong>How much does-it cost?</strong></h5>
+        <p class="card-text">Each project is studied on a case by case basis. Pricing is calculated according to the surface & the type of the landscape, the number of animals involved and the duration of the intervention. It starts from $3/day.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-subtitle mb-2"><i class="fas fa-exclamation-triangle"></i></h3>
+        <h5 class="card-title"><strong>Is an insurance included?</strong></h5>
+        <p class="card-text">Yes. A comprehensive insurance that covers damage caused by events that are out of our control is provided with every booking. You can have peace of mind knowing you are covered if anything happens with animals.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<br>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1527158169392-3fd115d40228?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);">
+  <div class="container">
+    <p>"All that was a delicious treat. Another plant I couldn't eat. Bleat, bleat, bleat!"</p>
+    <br>
+    <a href="#top" class="btn btn-outline-info">Find animals near you</a>
+  </div>
+</div>
